@@ -20,7 +20,8 @@
             <nav class="header-nav">
                 <a href="./index.html" class="logo-up link">Web<span class="logo-up-">Studio</span> </a>
                 <ul class="header-list list">
-                    <li class="header-item"><a href="./index.html" class="header-link current link">Студия</a></li>
+                    <div></div>
+                    <li class="header-item"><a href="./index.html" class="header-link down-hover current link">Студия</a></li>
                     <li class="header-item"><a href="./portfolio.html" class="header-link link">Портфолио</a></li>
                     <li class="header-item"><a href="" class="header-link link">Контакты</a></li>
                 </ul>
@@ -47,7 +48,7 @@
         <section class="section hero">
             <div class="conteiner">
                 <h1 class="hero-text">Эффективные решения для вашего бизнеса</h1>
-                <button class="hero-btn" type="button">Заказать услугу</button>
+                <button class="hero-btn" data-modal-open type="button">Заказать услугу</button>
             </div>
         </section>
         <section class="section benefits">
@@ -97,9 +98,24 @@
             <div class="conteiner">
                 <h2 class="about-title">Чем мы занимаемся</h2>
                 <ul class="about-list list">
-                    <li class="about-item"><img class="about-img" src="./images/img1.jpg" alt="работает за компьютером" width="370"></li>
-                    <li class="about-item"><img class="about-img" src="./images/img2.jpg" alt="работает за ноутбуком" width="370"></li>
-                    <li class="about-item"><img class="about-img" src="./images/img3.jpg" alt="работает на планшете" width="370"></li>
+                    <li class="about-item">
+                        <img class="about-img" src="./images/img1.jpg" alt="работает за компьютером" width="370">
+                        <div class="about-background">
+                            <p class="about-text">Десктопные приложения</p>
+                        </div>
+                    </li>
+                    <li class="about-item">
+                        <img class="about-img" src="./images/img2.jpg" alt="работает за ноутбуком" width="370">
+                        <div class="about-background">
+                            <p class="about-text">Мобильные приложения</p>
+                        </div>
+                    </li>
+                    <li class="about-item">
+                        <img class="about-img" src="./images/img3.jpg" alt="работает на планшете" width="370">
+                        <div class="about-background">
+                            <p class="about-text">Дизайнерские решения</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -353,6 +369,15 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="button-close" data-modal-close type="">
+                <svg class="icon-close">
+                    <use href="./images/iconsall1.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
     <script src="./js/modal.js"></script>   
 </body>
 </html>
