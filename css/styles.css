@@ -73,16 +73,7 @@ align-items: center;
     margin-right: 50px;
 }
 .header-mail,
-.header-tel {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--secondery-text-color);
-    padding: 32px 0;
-    display: inline-block;
-    transition: color var(--timing-anim);
-}
+.header-tel,
 .header-link {
     font-weight: 500;
     font-size: 14px;
@@ -91,9 +82,9 @@ align-items: center;
     color: var(--secondery-text-color);
     padding: 32px 0;
     display: inline-block;
+    transition: color var(--timing-anim);
 }
 .down-hover {
-    transition: color var(--timing-anim);
     position: relative;
 }
 .down-hover::after {
@@ -132,10 +123,12 @@ align-items: center;
     align-items: center;
     cursor: pointer;
 }
-.header-item-mail .header-mail:hover,
-.header-item-mail .header-mail:focus,
-.header-item-tel .header-tel:hover,
-.header-item-tel .header-tel:focus {
+.header-mail:hover,
+.header-mail:focus,
+.header-tel:hover,
+.header-tel:focus,
+.header-link:hover,
+.header-link:focus {
     color: var(--accent-color);
     fill: currentColor;
 }
@@ -146,7 +139,7 @@ align-items: center;
     display: flex;
     align-items: center;
 }
-.header .conteiner:not(index.html) {
+.header .conteiner {
     border-bottom: 1px solid #ECECEC;
 }
 .header-list {
@@ -250,13 +243,6 @@ align-items: center;
 .about-img {
     display: block;
 }
-.about-background {
-    position: absolute;
-    bottom: 0;
-    width: 370px;
-    height: 70px;
-    background: rgba(47, 48, 58, 0.8);
-}
 .about-text {
     font-weight: 700;
     font-size: 14px;
@@ -266,6 +252,13 @@ align-items: center;
     color: var(--primary-white-color);
     text-align: center;
     padding: 27px 0px;
+
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+
+    position: absolute;
 }
 .benefis-title- {
     font-weight: 700;
@@ -410,7 +403,7 @@ align-items: center;
     margin-bottom: 9px;
     transition: color var(--timing-anim);
 }
-.footer-mail:hover, .footer-tel:hover, .header-link:hover, .footer-mail:focus, .footer-tel:focus, .header-link:focus, .header-link:hover,.header-link:focus {
+.footer-mail:hover, .footer-tel:hover, .footer-mail:focus, .footer-tel:focus {
     color: var(--accent-color);
 }
 .footer-soc-icon {
@@ -455,14 +448,11 @@ align-items: center;
     justify-content: center;
     margin-bottom: 50px;
 }
-.choice-item {
-    transition: box-shadow var(--timing-anim);
-}
 .choice-item:not(:last-child) {
     margin-right: 8px;
 }
-.choice-item:hover,
-.choice-item:focus {
+.choice-btn:hover,
+.choice-btn:focus {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 }
@@ -477,7 +467,7 @@ align-items: center;
     padding: 6px 22px;
     border: none;
     border-radius: 4px;
-    transition: background-color var(--timing-anim), color var(--timing-anim);
+    transition: background-color var(--timing-anim), color var(--timing-anim), box-shadow var(--timing-anim);
 }
 .choice-btn:hover,
 .choice-btn:focus,
